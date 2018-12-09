@@ -29,8 +29,8 @@ def main():
     args = create_parser()
     print(f"""SQLiTalk version 0.1.0 {datetime.now()} \nEnter ".help" for usage hints.""")
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as my_socket:
-        my_socket.connect((args.ip, args.port))
-        logger.info('connect: {}:{}'.format(args.ip, args.port))
+        my_socket.connect((args.host, args.port))
+        logger.info('connect: {}:{}'.format(args.host, args.port))
         while True:
             input_str = session.prompt('sqlitalk> ')
             logger.info('input: {}'.format(input_str))

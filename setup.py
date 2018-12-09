@@ -24,7 +24,7 @@ try:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
-about = {'__version__': '0.1.1'}
+about = {'__version__': '0.1.2'}
 
 
 class UploadCommand(Command):
